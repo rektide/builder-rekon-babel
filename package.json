@@ -1,6 +1,6 @@
 {
 	"name": "builder-rekon-babel",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Rektide's Babel Builder",
 	"main": "builder-rekon-babel.js",
 	"scripts": {
@@ -23,12 +23,5 @@
 		"babel-core": "^6.24.1",
 		"babel-plugin-dynamic-import-node": "^1.0.2",
 		"babel-plugin-transform-es2015-modules-commonjs": "^6.24.1"
-	},
-	"babel": {
-		"plugins": [
-			"transform-es2015-modules-commonjs",
-			"dynamic-import-node"
-		]
 	}
-
 }
