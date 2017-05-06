@@ -1,13 +1,10 @@
 {
 	"name": "builder-rekon-babel",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Rektide's Babel Builder",
 	"main": "builder-rekon-babel.js",
 	"scripts": {
-		"setup:babelrc:gitignore": "grep -e '^.babelrc$' .gitignore || echo .babelrc >> .gitignore",
-		"setup:babelrc:ln": "[ -e .babelrc ] || ln -s node_modules/builder-rekon-babel/.babelrc .",
-		"setup:babelrc": "builder run setup:babelrc:gitignore && builder run setup:babelrc:ln",
-		"build:babel:node": "builder run setup:babelrc && babel --source-maps --ignore=node_modules,build --out-dir=build *.js",
+		"build:babel:node": "babel --source-maps --ignore=node_modules,build --out-dir=build --babelrc=node_modules/builder-rekon-babel/.babelrc *.js",
 		"clean:babel:node": "rm -r build/*",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
